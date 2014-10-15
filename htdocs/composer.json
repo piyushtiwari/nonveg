@@ -1,0 +1,15 @@
+{
+    "minimum-stability": "stable",
+    "autoload": {
+    	"psr-4": {
+    		"" : "application",
+    		"Nonveg\\Entity\\": "application/models/entities/",
+    		"Nonveg\\Repository\\": "application/models/repositories/"
+    	}
+    },
+    "require": {
+        "doctrine/common": "2.4.*",
+        "doctrine/dbal": "2.4.*",
+        "doctrine/orm": "2.4.*"
+    }
+}

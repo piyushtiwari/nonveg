@@ -1,4 +1,8 @@
 .DS_Store
 *.swp
 .vagrant
-*~
+htdocs/vendor
+.buildpath
+.project
+.settings/
+htdocs/composer.lock
