@@ -84,7 +84,7 @@ $config['rest_realm'] = 'REST API';
 |	'session' = check for PHP session variable. Set variable name below.
 |
 */
-$config['rest_auth'] = 'basic';
+$config['rest_auth'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -156,7 +156,7 @@ $config['auth_library_function'] = '';
 |	array('admin' => '1234')
 |
 */
-$config['rest_valid_logins'] = array('admin' => '1234', 'CapRok'=>'C@pr0k103', 'dilip'=>'dilip123');
+$config['rest_valid_logins'] = array('admin' => '1234');
 
 /*
 |--------------------------------------------------------------------------
@@ -311,7 +311,7 @@ $config['rest_key_name'] = 'X-API-KEY';
 |	'logs'
 |
 */
-$config['rest_logs_table'] = 'bwic_api_logs';
+$config['rest_logs_table'] = 'api_logs';
 
 /*
 |--------------------------------------------------------------------------
@@ -338,7 +338,7 @@ $config['rest_logs_table'] = 'bwic_api_logs';
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_logging'] = TRUE;
+$config['rest_enable_logging'] = FALSE;
 
 
 /*
