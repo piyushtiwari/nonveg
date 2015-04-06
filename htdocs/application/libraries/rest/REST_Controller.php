@@ -229,7 +229,6 @@ abstract class REST_Controller extends CI_Controller
         if (!isset($this->{'_'.$this->request->method.'_args'})) {
             $this->{'_'.$this->request->method.'_args'} = array();
         }
-
         // Set up our GET variables
         $this->_get_args        = array_merge($this->_get_args, $this->uri->ruri_to_assoc());
 
@@ -286,7 +285,7 @@ abstract class REST_Controller extends CI_Controller
         $this->auth_override    = $this->_auth_override_check();
 
         // Checking for keys? GET TO WorK!
-	// Skip keys test for $config['auth_override_class_method']['class'['method'] = 'none'
+	    // Skip keys test for $config['auth_override_class_method']['class'['method'] = 'none'
         if (config_item('rest_enable_keys') and $this->auth_override !== true) {
             $this->_allow = $this->_detect_api_key();
         }

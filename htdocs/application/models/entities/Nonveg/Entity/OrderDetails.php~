@@ -1,0 +1,53 @@
+<?php
+
+namespace Nonveg\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OrderDetails
+ *
+ * @ORM\Table(name="order_details")
+ * @ORM\Entity
+ */
+class OrderDetails
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_id", type="string", length=45, nullable=true)
+     */
+    private $orderId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="restuarant_menu_item_id", type="integer", nullable=true)
+     */
+    private $restuarantMenuItemId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     */
+    private $quantity;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_remark", type="string", length=100, nullable=true)
+     */
+    private $orderRemark;
+
+
+}

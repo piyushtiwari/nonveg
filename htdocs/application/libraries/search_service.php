@@ -6,12 +6,9 @@ class restuarant_service{
 		$this->em = $this->ci->doctrine->getEntityManager();
 	}
 	
-	function list_restuarants($id)
+	function search_restuarants()
 	{
 		//echo __FUNCTION__;
-        if($id){
-            return $this->em->getRepository('Nonveg\Entity\Restuarant')->find($id);
-        }
 		return $this->em->getRepository('Nonveg\Entity\Restuarant')->findAll();
 	}
 	
@@ -49,30 +46,4 @@ class restuarant_service{
 
 		return true;
 	}
-
-    function list_menu_items($id=null)
-    {
-        if($id){
-            return $this->em->getRepository('Nonveg\Entity\MenuItem')->find($id);
-        }
-        return $this->em->getRepository('Nonveg\Entity\MenuItem')->findAll();
-    }
-
-    function save_menu_item($menu_item)
-    {
-        /*
-         * (
-                [name] => Eat Some
-                [address] => Baner
-                [pincode] => 411045
-            )
-         */
-
-        $menuItemObj = new Nonveg\Entity\MenuItem();
-        $menuItemObj->setName($menu_item['name']);
-        $this->em->persist($menuItemObj);
-        $this->em->flush();
-
-        return true;
-    }
 }
